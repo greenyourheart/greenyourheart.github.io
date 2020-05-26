@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="学习了廖雪峰老师的git教程"/><link rel="alternate" href="/atom.xml" title="雨环的blog">
+<link rel="canonical" href="http://yoursite.com/2020/05/26/article/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=" />
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":"","toc":"","fancybox":"","pjax":"","latex":""};
+</script>
+
+    <title>学习了廖雪峰老师的git教程 - 雨环的blog</title>
+  <meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">雨环的blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">雨环的blog</a>
+</div>
+
+<nav class="site-navbar"></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">学习了廖雪峰老师的git教程
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2020-05-26
+        </span></div>
+    </header>
+
+    <div class="post-content"><h6 id="step1-安装"><a href="#step1-安装" class="headerlink" title="step1 - 安装"></a>step1 - 安装</h6><ul>
+<li>三个库<br>1是工作区 working directory<br>2是暂存区 stage<br>3是版本库 repository</li>
+<li>对应三个动作  </li>
+</ul>
+<p>1.从工作区提交至暂存区使用add<br>2.从暂存区提交至版本库使用commit </p>
+<blockquote>
+<p>安装完成后记得进行配置<br>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:email@example.com">email@example.com</a>“</p>
+</blockquote>
+<h6 id="step2-初使化"><a href="#step2-初使化" class="headerlink" title="step2 - 初使化"></a>step2 - 初使化</h6><blockquote>
+<p>使用以下命令将创建的文件目录变成repo<br>$ git init  </p>
+</blockquote>
+<ul>
+<li>初始化一个Git仓库，使用git init命令。</li>
+<li>添加文件到Git仓库，分两步：</li>
+</ul>
+<blockquote>
+<p>使用命令git add <file>，注意，可反复多次使用，添加多个文件；<br>使用命令git commit -m <message>，完成。  </p>
+</blockquote>
+<ul>
+<li><p>要随时掌握工作区的状态，使用git status命令。</p>
+</li>
+<li><p>如果git status告诉你有文件被修改过，用git diff可以查看修改内容。（只能看工作区文件的修改情况）</p>
+<blockquote>
+<p>git diff HEAD –<file>用于查看工作区与版本库的文件差别</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="step3-版本回退"><a href="#step3-版本回退" class="headerlink" title="step3 - 版本回退"></a>step3 - 版本回退</h6><ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset –hard commit_id。</li>
+<li>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。<blockquote>
+<p>git log –pretty=oneline</p>
+</blockquote>
+</li>
+<li>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</li>
+<li>git status 可以查看文件的修改状态<blockquote>
+<p>每一步都可以使用 git restore进行回退</p>
+</blockquote>
+</li>
+</ul>
+
+      </div>
+      
+      <footer class="post-footer">
+        
+        <nav class="post-nav"><a class="prev" href="/2020/05/26/article-1/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">日常行楷</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/2020/05/22/hello-world/">
+        <span class="next-text nav-default">Hello World</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"></div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="noopener">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2020<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dengyufan</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v="></script>
+</body>
+</html>
